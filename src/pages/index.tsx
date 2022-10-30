@@ -1,9 +1,9 @@
 import Layout from '../components/layout'
 
-export default function LandingPage() {
+export default function HomePage() {
   return (
     <Layout>
-      <h1>Landing page</h1>
+      <h1>Home page</h1>
     </Layout>
   )
 }
