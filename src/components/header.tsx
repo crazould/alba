@@ -3,12 +3,12 @@ import Button from "./button";
 
 export default function Header() {
   return (
-    <header className="fixed w-full">
+    <header className="fixed w-full bg-white">
       <div className="max-w-7xl m-auto flex justify-between p-4">
         <div className="flex items-center">
           <img src={logo} alt="Alba logo" />
         </div>
-        <nav className="w-3/5">
+        <nav className="lg:w-2/4 xl:w-3/5">
           <ul className="flex py-2  justify-between">
             <li className="py-4 font-bold">
               <a href="#about">About</a>

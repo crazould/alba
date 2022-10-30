@@ -3,7 +3,18 @@ import Layout from '../components/layout'
 export default function HomePage() {
   return (
     <Layout>
-      <h1>Home page</h1>
+      <section id='landing'>
+
+      </section>
+      <section id='service'>
+
+      </section>
+      <section id='portfolio'>
+
+      </section>
+      <section id='testimonials'>
+
+      </section>
     </Layout>
   )
 }
