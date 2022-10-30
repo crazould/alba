@@ -1,10 +1,16 @@
-function App() {
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LandingPage from "./pages";
+import ProfilePage from "./pages/profile-page";
 
+function App() {
   return (
-    <div className="">
-      <h1 className="text-blue-600 text-5xl font-bold">Alba</h1>
-    </div>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
