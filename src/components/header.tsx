@@ -1,10 +1,9 @@
 import logo from "../assets/alba-logo.png";
-import Button from "./button";
 
 export default function Header() {
   return (
     <header className="fixed w-full bg-white">
-      <div className="max-w-7xl m-auto flex justify-between p-4">
+      <div className="max-w-7xl m-auto p-4 flex justify-between ">
         <div className="flex items-center">
           <img src={logo} alt="Alba logo" />
         </div>
@@ -28,7 +27,12 @@ export default function Header() {
           </ul>
         </nav>
         <div className="flex items-center">
-          <Button onClick={() => {}}>Contact Us</Button>
+          <button
+            type="button"
+            className="bg-[var(--accent-color)] font-bold py-4 px-14 rounded-full hover:shadow-lg hover:shadow-yellow-400/50 transition duration-300"
+          >
+            Contact Us
+          </button>
         </div>
       </div>
     </header>

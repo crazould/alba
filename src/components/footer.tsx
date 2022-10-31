@@ -6,7 +6,7 @@ import linkedin from "../assets/Linked.png";
 export default function Footer() {
   return (
     <footer>
-      <div className="max-w-7xl m-auto flex justify-between px-4 py-8 border-y border-zinc-300">
+      <div className="max-w-7xl m-auto flex justify-between px-4 py-8 border-y border-zinc-400">
         <div className="basis-1/2">
           <img src={logo} alt="Alba logo" className="mb-8" />
           <p className="mb-8">
