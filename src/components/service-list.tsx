@@ -4,7 +4,7 @@ import productDesignLogo from "../assets/pro-des.png";
 import maintenanceLogo from "../assets/main.png";
 import cmsDevLogo from "../assets/cms-dev.png";
 import payLogo from "../assets/pay.png";
-import ServiceCard from "../components/service-card";
+import arrow from "../assets/Arrow.svg";
 
 const services = [
   {
@@ -41,9 +41,28 @@ const services = [
 
 export default function ServiceList() {
   return (
-    <div className="grid grid-cols-3 gap-8">
+    <div className="grid grid-cols-3 gap-8 mb-12">
       {services.map(({ logo, title, desc }, idx) => (
-        <ServiceCard key={idx} logo={logo} title={title} desc={desc} />
+        <div
+          key={idx}
+          className="group rounded-xl border-2 border-zinc-400 cursor-pointer duration-200 hover:border-[var(--accent-color)] p-6"
+        >
+          <img src={logo} alt={`${title} logo`} className="mb-4" />
+          <h3 className="text-xl font-bold mb-2 text-[var(--accent-color)] flex items-center">
+            {title}
+            <span
+              className="opacity-0 group-hover:opacity-100 duration-200"
+              style={{
+                backgroundImage: `url(${arrow})`,
+                display: "inline-block",
+                width: "24px",
+                height: "24px",
+                marginLeft: "8px",
+              }}
+            ></span>
+          </h3>
+          <p>{desc}</p>
+        </div>
       ))}
     </div>
   );

@@ -1,6 +1,7 @@
 import Layout from "../components/layout";
 import heroImg from "../assets/hero-img.png";
 import ServiceList from "../components/service-list";
+import SkillList from "../components/skill-list";
 
 export default function HomePage() {
   return (
@@ -36,6 +37,7 @@ export default function HomePage() {
               From product design to software continuous delivery
             </h2>
             <ServiceList />
+            <SkillList />
           </div>
         </section>
         <section className="bg-[var(--secondary-color)]">
