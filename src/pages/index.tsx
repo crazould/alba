@@ -32,8 +32,8 @@ export default function HomePage() {
             </Link>
           </div>
         </section>
-        <section id="service" className="mx-4">
-          <div className="py-8 mx-auto max-w-7xl">
+        <section  id="service" className="mx-4 pt-[104px]">
+          <div  className="py-8 mx-auto max-w-7xl">
             <p className="text-center mb-2 text-zinc-400">Complete Package</p>
             <h2 className="font-bold text-3xl text-center text-[var(--secondary-color)] mb-8">
               From product design to software continuous delivery
@@ -80,12 +80,13 @@ export default function HomePage() {
           <div className="flex flex-col items-center py-8 mx-auto max-w-7xl bg-[var(--accent-color)] rounded-xl">
             <p className="mb-6">Is software important for your business?</p>
             <h2 className="text-4xl mb-8">Build it with Albatech</h2>
-            <button
+            <Link
               type="button"
               className="bg-[var(--accent-color)] font-bold py-4 px-14 rounded-full border-2 border-[var(--secondary-color)]"
+              to="/login"
             >
               Consultation Now
-            </button>
+            </Link>
           </div>
         </section>
       </div>
