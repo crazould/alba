@@ -32,11 +32,9 @@ const skills = [
 
 export default function SkillList() {
   return (
-    <div className="grid grid-cols-6 gap-8">
+    <div className="grid grid-cols-6 gap-x-36 gap-y-20">
       {skills.map(({ logo, title }, idx) => (
-        <div className="flex justify-center">
-          <img key={idx} src={logo} alt={`${title} logo`} />
-        </div>
+        <img key={idx} src={logo} alt={`${title} logo`} />
       ))}
     </div>
   );

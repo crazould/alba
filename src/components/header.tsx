@@ -1,11 +1,14 @@
+import { Link } from "react-router-dom";
 import logo from "../assets/alba-logo.png";
 
 export default function Header() {
   return (
-    <header className="fixed w-full bg-white">
+    <header className="fixed w-full bg-white z-50">
       <div className="max-w-7xl m-auto p-4 flex justify-between ">
         <div className="flex items-center">
-          <img src={logo} alt="Alba logo" />
+          <Link to="/">
+            <img src={logo} alt="Alba logo" />
+          </Link>
         </div>
         <nav className="lg:w-2/4 xl:w-3/5">
           <ul className="flex py-2  justify-between">

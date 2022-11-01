@@ -2,11 +2,12 @@ import Layout from "../components/layout";
 import heroImg from "../assets/hero-img.png";
 import ServiceList from "../components/service-list";
 import SkillList from "../components/skill-list";
+import { Link } from "react-router-dom";
 
 export default function HomePage() {
   return (
     <Layout>
-      <div className="pt-[104px]">
+      <div className="">
         <section id="landing" className="relative px-4 py-8 min-h-[632px]">
           <div className="absolute right-0">
             <img src={heroImg} alt="alba hero image" />
@@ -22,12 +23,13 @@ export default function HomePage() {
               your development team
             </h2>
             <p>in weeks, not months</p>
-            <button
+            <Link
               type="button"
               className="bg-[var(--accent-color)] font-bold py-4 px-14 rounded-full hover:shadow-lg hover:shadow-yellow-400/50 transition duration-300"
+              to="/login"
             >
               Book now
-            </button>
+            </Link>
           </div>
         </section>
         <section id="service" className="mx-4">
@@ -63,12 +65,14 @@ export default function HomePage() {
           </div>
         </section>
         <section id="portfolio">
-          <h2 className="font-bold text-3xl text-center text-[var(--secondary-color)]">
+          <p className="text-center mb-2 text-zinc-400">Portfolio</p>
+          <h2 className="font-bold text-3xl text-center text-[var(--secondary-color)] mb-8">
             The software that we build takes our clients to the next level
           </h2>
         </section>
         <section id="testimonials">
-          <h2 className="font-bold text-3xl text-center text-[var(--secondary-color)]">
+          <p className="text-center mb-2 text-zinc-400">Testimonials</p>
+          <h2 className="font-bold text-3xl text-center text-[var(--secondary-color)] mb-8">
             What clients love in working with Albatech Team
           </h2>
         </section>
