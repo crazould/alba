@@ -94,7 +94,7 @@ export default function HomePage() {
             <PortfolioCarousel />
           </div>
         </section>
-        <section className="mx-4">
+        <section className="mx-4 mb-16">
           <div className="flex flex-col items-center py-8 mx-auto max-w-7xl bg-[var(--accent-color)] rounded-xl">
             <p className="mb-6">Is software important for your business?</p>
             <h2 className="text-4xl mb-8">Build it with Albatech</h2>

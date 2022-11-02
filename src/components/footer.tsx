@@ -6,8 +6,8 @@ import linkedin from "../assets/Linked.png";
 export default function Footer() {
   return (
     <footer>
-      <div className="max-w-7xl m-auto flex justify-between px-4 py-8 border-y border-zinc-400">
-        <div className="basis-1/2">
+      <div className="max-w-7xl m-auto flex flex-wrap justify-between px-4 py-8 border-y border-zinc-400">
+        <div className="mb-8 md:basis-1/4 lg:basis-1/2">
           <img src={logo} alt="Alba logo" className="mb-8" />
           <p className="mb-8">
             Albatech acts as a corporate partner to help digitize their business
