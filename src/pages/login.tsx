@@ -63,7 +63,7 @@ export default function LoginPage() {
           </label>
           <input
             ref={emailRef}
-            className="mb-4 py-2 pl-4 rounded-full border border-zinc-400 "
+            className="mb-4 py-2 pl-4 rounded-full border border-zinc-400"
             required
             type="email"
             name="email"

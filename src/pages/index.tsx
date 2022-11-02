@@ -1,14 +1,15 @@
+import { Link } from "react-router-dom";
 import Layout from "../components/layout";
 import heroImg from "../assets/hero-img.png";
 import ServiceList from "../components/service-list";
 import SkillList from "../components/skill-list";
-import { Link } from "react-router-dom";
+import PortfolioList from "../components/portfolio-list";
 
 export default function HomePage() {
   return (
     <Layout>
       <div className="">
-        <section id="landing" className="relative px-4 py-8 min-h-[632px]">
+        <section id="about" className="relative px-4 py-8 min-h-[632px]">
           <div className="absolute right-0">
             <img src={heroImg} alt="alba hero image" />
           </div>
@@ -32,8 +33,8 @@ export default function HomePage() {
             </Link>
           </div>
         </section>
-        <section  id="service" className="mx-4 pt-[104px]">
-          <div  className="py-8 mx-auto max-w-7xl">
+        <section id="service" className="mx-4 pt-[104px]">
+          <div className="mx-auto max-w-7xl">
             <p className="text-center mb-2 text-zinc-400">Complete Package</p>
             <h2 className="font-bold text-3xl text-center text-[var(--secondary-color)] mb-8">
               From product design to software continuous delivery
@@ -64,16 +65,26 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-        <section id="portfolio">
-          <p className="text-center mb-2 text-zinc-400">Portfolio</p>
-          <h2 className="font-bold text-3xl text-center text-[var(--secondary-color)] mb-8">
-            The software that we build takes our clients to the next level
-          </h2>
+        <section id="portfolio" className="pt-[104px]">
+          <div className="flex flex-col items-center mx-auto max-w-7xl">
+            <p className="text-center mb-2 text-zinc-400">Portfolio</p>
+            <h2 className="font-bold text-3xl text-center text-[var(--secondary-color)] mb-8">
+              The software that we build <br /> takes our clients to the next level
+            </h2>
+            <PortfolioList />
+            <Link
+              type="button"
+              className="bg-[var(--accent-color)] font-bold py-4 px-14 rounded-full hover:shadow-lg hover:shadow-yellow-400/50 transition duration-300"
+              to="/login"
+            >
+              Learn more
+            </Link>
+          </div>
         </section>
-        <section id="testimonials">
+        <section id="testimonials" >
           <p className="text-center mb-2 text-zinc-400">Testimonials</p>
           <h2 className="font-bold text-3xl text-center text-[var(--secondary-color)] mb-8">
-            What clients love in working with Albatech Team
+            What clients love in working <br /> with Albatech Team
           </h2>
         </section>
         <section className="mx-4">
