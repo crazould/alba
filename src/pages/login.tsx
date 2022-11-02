@@ -8,7 +8,7 @@ export default function LoginPage() {
   const passwordRef = useRef() as React.MutableRefObject<HTMLInputElement>;
   const { token, setToken } = useTokenContext();
   const [loading, setLoading] = useState(false);
-  const [info, setInfo] = useState<string | null>("");
+  const [info, setInfo] = useState<string | null>(null);
   const nav = useNavigate();
 
   async function handleLogin(e: FormEvent) {
@@ -90,7 +90,7 @@ export default function LoginPage() {
           <button
             type="submit"
             className={`bg-[var(--accent-color)] font-bold py-4 px-14 rounded-full hover:shadow-lg hover:shadow-yellow-400/50 duration-200 ${
-              loading && "animate-pulse"
+              loading && "animate-bounce"
             }`}
           >
             {loading ? "loading..." : "Login"}

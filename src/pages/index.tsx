@@ -4,11 +4,12 @@ import heroImg from "../assets/hero-img.png";
 import ServiceList from "../components/service-list";
 import SkillList from "../components/skill-list";
 import PortfolioList from "../components/portfolio-list";
+import PortfolioCarousel from "../components/portfolio-carousel";
 
 export default function HomePage() {
   return (
     <Layout>
-      <div className="">
+      <div className="overflow-x-hidden">
         <section id="about" className="relative px-4 py-8 min-h-[632px]">
           <div className="absolute right-0">
             <img src={heroImg} alt="alba hero image" />
@@ -33,8 +34,8 @@ export default function HomePage() {
             </Link>
           </div>
         </section>
-        <section id="service" className="mx-4 pt-[104px]">
-          <div className="mx-auto max-w-7xl">
+        <section id="service" className="mx-4 ">
+          <div className="mx-auto max-w-7xl py-8">
             <p className="text-center mb-2 text-zinc-400">Complete Package</p>
             <h2 className="font-bold text-3xl text-center text-[var(--secondary-color)] mb-8">
               From product design to software continuous delivery
@@ -46,8 +47,8 @@ export default function HomePage() {
         <section className="bg-[var(--secondary-color)]">
           <div className="py-8 max-w-7xl m-auto px-4">
             <h2 className="font-bold text-3xl text-center text-[var(--accent-color)] mb-8">
-              Our Progress Comes with a Collaboration Between Creativity, Ideas,
-              and Technology
+              Our Progress Comes with a Collaboration Between <br /> Creativity,
+              Ideas, and Technology
             </h2>
             <div className="text-[var(--primary-color)] flex justify-between">
               <div className="flex items-center flex-col">
@@ -65,11 +66,12 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-        <section id="portfolio" className="pt-[104px]">
-          <div className="flex flex-col items-center mx-auto max-w-7xl">
+        <section id="portfolio" className="mx-4">
+          <div className="flex flex-col items-center mx-auto max-w-7xl py-8">
             <p className="text-center mb-2 text-zinc-400">Portfolio</p>
             <h2 className="font-bold text-3xl text-center text-[var(--secondary-color)] mb-8">
-              The software that we build <br /> takes our clients to the next level
+              The software that we build <br /> takes our clients to the next
+              level
             </h2>
             <PortfolioList />
             <Link
@@ -81,11 +83,16 @@ export default function HomePage() {
             </Link>
           </div>
         </section>
-        <section id="testimonials" >
+        <section id="testimonials">
           <p className="text-center mb-2 text-zinc-400">Testimonials</p>
           <h2 className="font-bold text-3xl text-center text-[var(--secondary-color)] mb-8">
             What clients love in working <br /> with Albatech Team
           </h2>
+        </section>
+        <section >
+          <div className="mx-auto max-w-7xl py-8">
+            <PortfolioCarousel />
+          </div>
         </section>
         <section className="mx-4">
           <div className="flex flex-col items-center py-8 mx-auto max-w-7xl bg-[var(--accent-color)] rounded-xl">

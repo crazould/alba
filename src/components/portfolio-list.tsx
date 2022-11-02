@@ -24,7 +24,7 @@ const portfolios = [
 ];
 
 export default function PortfolioList() {
-  return <ul className="grid grid-cols-3 gap-8 mb-8">
+  return <ul className="grid md:grid-cols-3 gap-8 mb-8">
     {portfolios.map(({thumbnail, type, title, desc}, idx) => (
       <li key={idx} className="group cursor-pointer">
         <img src={thumbnail} alt={`${title} thumbnail`} className="w-full"/>
