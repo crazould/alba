@@ -9,32 +9,49 @@ import PortfolioCarousel from "../components/portfolio-carousel";
 export default function HomePage() {
   return (
     <Layout>
-      <div className="overflow-x-hidden">
-        <section id="about" className="relative px-4 py-8 min-h-[632px]">
-          <div className="absolute right-0">
-            <img src={heroImg} alt="alba hero image" />
-          </div>
-          <div className="absolute">
+      <div
+        className="overflow-x-hidden"
+        style={{
+          backgroundColor: "#ffffff",
+          opacity: "1",
+          backgroundImage:
+            "linear-gradient(#f3f4f6 1.4px, transparent 1.4px), linear-gradient(to right, #f3f4f6 1.4px, #ffffff 1.4px)",
+          backgroundSize: "50px 50px",
+        }}
+      >
+        <section id="about" className="py-8 flex justify-between items-center">
+          <div className="relative left-[16%] z-10">
             <h2
-              className="font-black text-5xl text-[var(--secondary-color)] bg-[var(--primary-color)] p-4 px-6 w-fit"
+              className="font-black text-5xl text-[var(--secondary-color)] bg-[var(--primary-color)] p-4 px-6 w-fit mb-4"
               style={{ textShadow: "-1px 0px 2px var(--secondary-color)" }}
             >
               Build or scale up
             </h2>
-            <h2 className="text-5xl text-[var(--secondary-color)]">
+            <p className="text-5xl text-[var(--secondary-color)] ml-4 mb-4 whitespace-nowrap">
               your development team
-            </h2>
-            <p>in weeks, not months</p>
+            </p>
+            <p className=" bg-[var(--primary-color)] p-4 px-6 w-fit ml-4 mb-4">
+              <span className="inline-block bg-[var(--accent-color)] w-[75px] h-[5px] mr-4"></span>{" "}
+              in weeks, not months
+            </p>
             <Link
               type="button"
-              className="bg-[var(--accent-color)] font-bold py-4 px-14 rounded-full hover:shadow-lg hover:shadow-yellow-400/50 transition duration-300"
+              className="ml-4 bg-[var(--accent-color)] font-bold py-4 px-14 rounded-full hover:shadow-lg hover:shadow-yellow-400/50 transition duration-300"
               to="/login"
             >
               Book now
             </Link>
           </div>
+          <img src={heroImg} alt="albatech hero image" className="relative valid:md:w-[100vw] lg:w-[65vw]" />
         </section>
-        <section id="service" className="mx-4 ">
+        <section
+          id="service"
+          className="px-4 bg-white"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%)",
+          }}
+        >
           <div className="mx-auto max-w-7xl py-8">
             <p className="text-center mb-2 text-zinc-400">Complete Package</p>
             <h2 className="font-bold text-3xl text-center text-[var(--secondary-color)] mb-8">
@@ -66,7 +83,7 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-        <section id="portfolio" className="mx-4">
+        <section id="portfolio" className="px-4 bg-white">
           <div className="flex flex-col items-center mx-auto max-w-7xl py-8">
             <p className="text-center mb-2 text-zinc-400">Portfolio</p>
             <h2 className="font-bold text-3xl text-center text-[var(--secondary-color)] mb-8">
@@ -83,19 +100,19 @@ export default function HomePage() {
             </Link>
           </div>
         </section>
-        <section id="testimonials">
+        <section id="testimonials" className="bg-white">
           <p className="text-center mb-2 text-zinc-400">Testimonials</p>
-          <h2 className="font-bold text-3xl text-center text-[var(--secondary-color)] mb-8">
+          <h2 className="font-bold text-3xl text-center text-[var(--secondary-color)]">
             What clients love in working <br /> with Albatech Team
           </h2>
         </section>
-        <section >
+        <section className="bg-white">
           <div className="mx-auto max-w-7xl py-8">
             <PortfolioCarousel />
           </div>
         </section>
-        <section className="mx-4 mb-16">
-          <div className="flex flex-col items-center py-8 mx-auto max-w-7xl bg-[var(--accent-color)] rounded-xl">
+        <section className="px-4 pb-16 bg-white">
+          <div className="flex flex-col items-center py-8 mx-auto max-w-7xl bg-[var(--accent-color)] rounded-xl ">
             <p className="mb-6">Is software important for your business?</p>
             <h2 className="text-4xl mb-8">Build it with Albatech</h2>
             <Link

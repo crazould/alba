@@ -40,13 +40,12 @@ const services = [
 ];
 
 export default function ServiceList() {
-  
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 xl:gap-8 mb-12">
+    <ul className="grid grid-cols-1 md:grid-cols-3 gap-4 xl:gap-8 mb-12">
       {services.map(({ logo, title, desc }, idx) => (
-        <div
+        <li
           key={idx}
-          className="group rounded-xl border-2 border-zinc-400 cursor-pointer duration-200 hover:border-[var(--accent-color)] p-6"
+          className="group bg-white rounded-xl border-2 border-zinc-400 cursor-pointer duration-200 hover:border-[var(--accent-color)] p-6"
         >
           <img src={logo} alt={`${title} logo`} className="mb-4" />
           <h3 className="text-xl font-bold mb-2 text-[var(--accent-color)] flex items-center">
@@ -63,8 +62,8 @@ export default function ServiceList() {
             ></span>
           </h3>
           <p>{desc}</p>
-        </div>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 }
