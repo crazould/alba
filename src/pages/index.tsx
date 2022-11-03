@@ -42,7 +42,7 @@ export default function HomePage() {
               Book now
             </Link>
           </div>
-          <img src={heroImg} alt="albatech hero image" className="relative valid:md:w-[100vw] lg:w-[65vw]" />
+          <img src={heroImg} alt="albatech hero image" className="relative w-screen lg:w-[65vw]" />
         </section>
         <section
           id="service"
