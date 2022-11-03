@@ -5,6 +5,7 @@ import ServiceList from "../components/service-list";
 import SkillList from "../components/skill-list";
 import PortfolioList from "../components/portfolio-list";
 import PortfolioCarousel from "../components/portfolio-carousel";
+import ReviewList from "../components/review-list";
 
 export default function HomePage() {
   return (
@@ -19,15 +20,15 @@ export default function HomePage() {
           backgroundSize: "50px 50px",
         }}
       >
-        <section id="about" className="py-8 flex justify-between items-center">
-          <div className="relative left-[16%] z-10">
+        <section id="about" className="relative py-8 lg:py-2 flex items-center min-h-[600px]">
+          <div className="absolute left-0 md:translate-x-[16%] z-10 w-screen">
             <h2
-              className="font-black text-5xl text-[var(--secondary-color)] bg-[var(--primary-color)] p-4 px-6 w-fit mb-4"
+              className="font-black text-5xl text-[var(--secondary-color)] bg-[var(--primary-color)] p-4 px-6 md:w-fit mb-4"
               style={{ textShadow: "-1px 0px 2px var(--secondary-color)" }}
             >
               Build or scale up
             </h2>
-            <p className="text-5xl text-[var(--secondary-color)] ml-4 mb-4 whitespace-nowrap">
+            <p className="text-5xl text-[var(--secondary-color)] ml-4 mb-4 md:whitespace-nowrap">
               your development team
             </p>
             <p className=" bg-[var(--primary-color)] p-4 px-6 w-fit ml-4 mb-4">
@@ -42,7 +43,9 @@ export default function HomePage() {
               Book now
             </Link>
           </div>
-          <img src={heroImg} alt="albatech hero image" className="relative w-screen lg:w-[65vw]" />
+          <div className="absolute right-0 hidden md:block">
+            <img src={heroImg} alt="albatech hero image" className="" />
+          </div>
         </section>
         <section
           id="service"
@@ -63,9 +66,9 @@ export default function HomePage() {
         </section>
         <section className="bg-[var(--secondary-color)]">
           <div className="py-8 max-w-7xl m-auto px-4">
-            <h2 className="font-bold text-3xl text-center text-[var(--accent-color)] mb-8 mx-auto max-w-[500px]">
-              Our Progress Comes with a Collaboration Between Creativity,
-              Ideas, and Technology
+            <h2 className="font-bold text-3xl text-center text-[var(--accent-color)] mb-8 mx-auto max-w-[682px]">
+              Our Progress Comes with a Collaboration Between Creativity, Ideas,
+              and Technology
             </h2>
             <div className="text-[var(--primary-color)] flex justify-between">
               <div className="flex items-center flex-col">
@@ -87,8 +90,7 @@ export default function HomePage() {
           <div className="flex flex-col items-center mx-auto max-w-7xl py-8">
             <p className="text-center mb-2 text-zinc-400">Portfolio</p>
             <h2 className="font-bold text-3xl text-center text-[var(--secondary-color)] mb-8 max-w-[500px]">
-              The software that we build takes our clients to the next
-              level
+              The software that we build takes our clients to the next level
             </h2>
             <PortfolioList />
             <Link
@@ -102,9 +104,12 @@ export default function HomePage() {
         </section>
         <section id="testimonials" className="bg-white">
           <p className="text-center mb-2 text-zinc-400">Testimonials</p>
-          <h2 className="font-bold text-3xl text-center text-[var(--secondary-color)]">
+          <h2 className="font-bold text-3xl text-center text-[var(--secondary-color)] mb-8">
             What clients love in working <br /> with Albatech Team
           </h2>
+          <div className="flex flex-col mx-auto max-w-7xl py-8 px-4">
+            <ReviewList/>
+          </div>
         </section>
         <section className="bg-white">
           <div className="mx-auto max-w-7xl py-8">
