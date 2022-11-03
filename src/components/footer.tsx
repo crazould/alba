@@ -1,6 +1,6 @@
 import logo from "../assets/alba-logo.png";
 import fb from "../assets/Fb.png";
-import ig from "../assets/ig.png";
+import ig from "../assets/Ig.png";
 import linkedin from "../assets/Linked.png";
 
 export default function Footer() {
