@@ -20,8 +20,11 @@ export default function HomePage() {
           backgroundSize: "50px 50px",
         }}
       >
-        <section id="about" className="relative py-8 lg:py-2 flex items-center min-h-[600px]">
-          <div className="absolute left-0 md:translate-x-[16%] z-10 w-screen">
+        <section
+          id="about"
+          className="relative py-8 lg:py-2 flex items-center min-h-[600px] max-w-[1440px] mx-auto"
+        >
+          <div className="absolute left-0 md:translate-x-[16%] z-10 w-screen max-w-7xl">
             <h2
               className="font-black text-5xl text-[var(--secondary-color)] bg-[var(--primary-color)] p-4 px-6 md:w-fit mb-4"
               style={{ textShadow: "-1px 0px 2px var(--secondary-color)" }}
@@ -47,6 +50,7 @@ export default function HomePage() {
             <img src={heroImg} alt="albatech hero image" className="" />
           </div>
         </section>
+
         <section
           id="service"
           className="px-4 bg-white"
@@ -64,22 +68,23 @@ export default function HomePage() {
             <SkillList />
           </div>
         </section>
+
         <section className="bg-[var(--secondary-color)]">
           <div className="py-8 max-w-7xl m-auto px-4">
             <h2 className="font-bold text-3xl text-center text-[var(--accent-color)] mb-8 mx-auto max-w-[682px]">
               Our Progress Comes with a Collaboration Between Creativity, Ideas,
               and Technology
             </h2>
-            <div className="text-[var(--primary-color)] flex justify-between">
-              <div className="flex items-center flex-col">
+            <div className="text-[var(--primary-color)] md:flex justify-between">
+              <div className="flex items-center flex-col mb-10 md:mb-0">
                 <div className="text-5xl mb-2">1000+</div>
                 <div className="text-xl">Designs</div>
               </div>
-              <div className="flex items-center flex-col">
+              <div className="flex items-center flex-col mb-10 md:mb-0">
                 <div className="text-5xl mb-2">30+</div>
                 <div className="text-xl">Products</div>
               </div>
-              <div className="flex items-center flex-col">
+              <div className="flex items-center flex-col ">
                 <div className="text-5xl mb-2">58+</div>
                 <div className="text-xl">Web Developments</div>
               </div>
@@ -108,7 +113,7 @@ export default function HomePage() {
             What clients love in working <br /> with Albatech Team
           </h2>
           <div className="flex flex-col mx-auto max-w-7xl py-8 px-4">
-            <ReviewList/>
+            <ReviewList />
           </div>
         </section>
         <section className="bg-white">
