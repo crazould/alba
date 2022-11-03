@@ -47,7 +47,7 @@ export default function LoginPage() {
 
   return (
     <Layout>
-      <section className="mt-32 mx-4">
+      <section className="py-32 mx-4">
         <form
           onSubmit={handleLogin}
           className="flex flex-col py-8 md:py-16 px-4 md:px-8 mx-auto max-w-md rounded-xl shadow-xl relative border border-zinc-300"

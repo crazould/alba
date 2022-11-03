@@ -48,7 +48,7 @@ export default function Header() {
           </button>
         </div>
       </div>
-      <nav className={`${!show ? "opacity-0" : "opacity-1"} duration-300`}>
+      <nav className={`fixed ${show ? "left-0" : "left-[100vw]"} duration-500 md:hidden`}>
         <ul className="fixed w-screen h-screen z-50 bg-white ">
           <li className="py-4 font-bold text-center">
             <a href="#about">About</a>
