@@ -63,8 +63,8 @@ export default function HomePage() {
         </section>
         <section className="bg-[var(--secondary-color)]">
           <div className="py-8 max-w-7xl m-auto px-4">
-            <h2 className="font-bold text-3xl text-center text-[var(--accent-color)] mb-8">
-              Our Progress Comes with a Collaboration Between <br /> Creativity,
+            <h2 className="font-bold text-3xl text-center text-[var(--accent-color)] mb-8 mx-auto max-w-[500px]">
+              Our Progress Comes with a Collaboration Between Creativity,
               Ideas, and Technology
             </h2>
             <div className="text-[var(--primary-color)] flex justify-between">
@@ -86,8 +86,8 @@ export default function HomePage() {
         <section id="portfolio" className="px-4 bg-white">
           <div className="flex flex-col items-center mx-auto max-w-7xl py-8">
             <p className="text-center mb-2 text-zinc-400">Portfolio</p>
-            <h2 className="font-bold text-3xl text-center text-[var(--secondary-color)] mb-8">
-              The software that we build <br /> takes our clients to the next
+            <h2 className="font-bold text-3xl text-center text-[var(--secondary-color)] mb-8 max-w-[500px]">
+              The software that we build takes our clients to the next
               level
             </h2>
             <PortfolioList />
